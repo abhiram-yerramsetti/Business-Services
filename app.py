@@ -15,8 +15,8 @@ import markdown
 # Load environment variables
 
 # Configure Google Gemini
-GOOGLE_API_KEY="AIzaSyBEd9Pupy-I4Dy88kWFQbnfweaVGzv6b1E"
-GOOGLE_CSE_ID="AIzaSyBSP3zwfvOmdlatJIzUtpsSlPiMR51oAqM"  # Replace with your Search Engine ID
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+model = genai.GenerativeModel('gemini-pro')
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-2.5-flash-preview-04-17')
